@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # all app here
-    'my_profile'
+    'my_profile',
+    'my_album'
 ]
 
 MIDDLEWARE = [
