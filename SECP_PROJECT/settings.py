@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # Whitenoise for middleware
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -119,6 +120,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 # production, don't forget to run collectstatic
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+# Whitenoise for statc files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # development environment
 
@@ -126,9 +128,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # Aws media storage configurations
-AWS_ACCESS_KEY_ID = 'AKIARVGPJVYVATR5L7HQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'bucketeer-877dd773-51d8-45f1-bff8-64ae71ebc53d'
+AWS_ACCESS_KEY_ID = 'AKIARVGPJVYVGUEVAO6B'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'nasim.secpstorage'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
