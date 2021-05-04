@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="{% static 'blueberry/assets/vendor/leaflet/dist/leaflet.css' %}" />
     <link
       rel="stylesheet"
-      href="{% static 'blueberry/documentation/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css' %}"
+      href="{% static 'blueberry/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css' %}"
     />
     <link rel="stylesheet" href="{% static 'blueberry/assets/vendor/select2/dist/css/select2.min.css' %}" />
 
@@ -261,7 +261,7 @@
                           <!-- Banner Image -->
                           <div
                             class="navbar-banner"
-                            style="background-image: url(../../assets/img/750x750/img1.jpg)"
+                            style="background-image: url({% static 'blueberry/assets/img/750x750/img1.jpg' %})"
                           >
                             <div class="navbar-banner-content">
                               <div class="mb-4">
@@ -1653,11 +1653,10 @@
     <script src="{% static 'blueberry/assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js' %}"></script>
     <script src="{% static 'blueberry/documentation/assets/vendor/jquery-ui/jquery-ui.core.min.js' %}"></script>
     <script src="{% static 'blueberry/documentation/documentation/assets/vendor/jquery-ui/ui/widgets/menu.js' %}"></script>
-    <!-- documentation 
-    <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
-    <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
-    <script src="../../documentation/assets/vendor/prism/prism.js"></script>
-    documentation end -->
+    <!-- documentation -->
+    <script src="{% static 'blueberry/documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js' %}"></script>
+    <script src="{% static 'blueberry/documentation/assets/vendor/jquery-ui/ui/widgets/autocomplete.js' %}"></script>
+    <script src="{% static 'blueberry/documentation/assets/vendor/prism/prism.js' %}"></script>
 
     <!-- JS Blueberry -->
     <script src="{% static 'blueberry/assets/js/hs.core.js' %}"></script>
