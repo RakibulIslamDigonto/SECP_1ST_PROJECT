@@ -168,33 +168,15 @@
           -->
 
           <!-- Search Section -->
-          <div class="bg-navy">
-            <div
-              class="bg-img-hero-center"
-              style="background-image: url(../../assets/svg/components/abstract-shapes-19.svg)"
-            >
-              <div class="container space-1">
-                <div class="w-lg-80 mx-lg-auto">
-                  <!-- Input -->
-                  <form
-                    action="{% url 'blog:search_blog' %}"
-                    class="input-group input-group-merge input-group-borderless"
-                  >
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="askQuestions">
-                        <i class="fas fa-search"></i>
-                      </span>
-                    </div>
-                    <input
-                      type="search"
-                      class="form-control"
-                      placeholder="Search for answers"
-                      aria-label="Search for answers"
-                      name="q"
-                      aria-describedby="askQuestions"
-                    />
-                  </form>
-                  <!-- End Input -->
+
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'blog:blog_lists' %}">Blog Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+            </ol>
+          </nav>
+          <h1>Search result: {{query}} </h1>
                 </div>
               </div>
             </div>
@@ -207,7 +189,7 @@
       <!-- Blog Listing Section -->
       <div class="container space-bottom-3">
         <div class="w-md-75 w-lg-60 mx-md-auto">
-          {% for blog in page_obj %}
+          {% for blog in queryset %}
           <article class="card mb-3 mb-sm-5">
             <!-- img = 900x450 -->
             <img class="card-img-top" src="{{ blog.thumbnail.url }}" alt="Image Description" />
@@ -251,6 +233,7 @@
           <div class="space-bottom-2"></div>
 
           <!-- Pagination -->
+           <!--
           <nav aria-label="Page navigation">
             <ul class="pagination mb-0">
               {% if page_obj.has_previous %}
@@ -302,7 +285,7 @@
             </ul>
           </nav>
 
-          <!-- End Pagination -->
+ End Pagination -->
         </div>
       </div>
       <!-- End Blog Listing Section -->

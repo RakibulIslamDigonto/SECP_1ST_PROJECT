@@ -8,9 +8,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('my_profile.urls', namespace='my_profile')),
-    path('blog/', include('blog.urls', namespace='blog')),
-    path('album/', include('my_album.urls', namespace='my_album'))
+    path('profile/', include('my_profile.urls', namespace='my_profile')),
+    path('', include('blog.urls', namespace='blog')),
+    path('album/', include('my_album.urls', namespace='my_album')),
+    path('summernote/', include('django_summernote.urls'))
+
 ]
 
 
