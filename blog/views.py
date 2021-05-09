@@ -66,6 +66,7 @@ def search_blog(request):
                 description__icontains=query)
 
         ).distinct()
+
     context = {
         'queryset': queryset,
         'query': query
