@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from taggit.managers import TaggableManager
+#from taggit.managers import TaggableManager
 
 # Create your models here.
 
