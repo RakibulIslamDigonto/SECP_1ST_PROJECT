@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-
+        ('taggit', '0004_auto_20210508_1946'),
     ]
 
     operations = [
